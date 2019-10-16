@@ -10,13 +10,19 @@ import ply.lex as lex
 
 
 def lexing(inp):
+    """
+    Function for tokenizing input and displaying token value
+    :param inp: (String) - Input value for tokenizing
+    :return: N/A
+    """
 
-    # Initialize tokens
+    # Initialize Token names
     tokens = ["NUM", "SYM", "ADD", "SUBTRACT", "MULTIPLY", "DIVIDE", "LPAREN", "RPAREN", "ERROR"]
 
-    # Ignore space tokens
+    # Used to ignore space values in token
     t_ignore = ' \t'
 
+    # If error is thrown, display the illegal character
     def t_error(t):
         print(f'Illegal Character {t}')
 
