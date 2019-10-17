@@ -74,5 +74,7 @@ def lexing(inp):
         print(tok)
 
 
-lexing("3 99 5 + 4 * 3 + 44")
+if __name__ == '__main__':
+    lexing(input("Enter String: "))
+#lexing("3 99 5 + 4 * 3 + 44")
 
